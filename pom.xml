@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>Issue1</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Sample project to use Spring batch with Elasticsearch</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -41,6 +41,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.36</version>
 		</dependency>
 	</dependencies>
 	
