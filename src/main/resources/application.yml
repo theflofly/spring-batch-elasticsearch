@@ -1,0 +1,11 @@
+spring:
+  batch:
+    job:
+      enabled: false
+
+mysql:
+  password: mypass
+  user: jeffrey
+  host: localhost
+  port: 3306
+  dbName: db_issue1
