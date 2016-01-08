@@ -1,3 +1,4 @@
+
 package com.tcb.issue1.configuration;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
@@ -43,13 +44,13 @@ public class MySQLConfiguration {
     @Bean
     public DataSource provisioningDbDataSource() throws SQLException {
 
-
         MysqlDataSource provisioningDbDataSource = new MysqlDataSource();
         provisioningDbDataSource.setURL("jdbc:mysql://" + dbHost + ":" + dbPort +"/" + dbName);
         provisioningDbDataSource.setUser(user);
         provisioningDbDataSource.setPassword(password);
 
         return provisioningDbDataSource;
+
     }
 
 }
