@@ -16,7 +16,6 @@ import java.sql.SQLException;
  * @author floriancourtial@gmail.com
  */
 @Configuration
-@EnableTransactionManagement
 public class MySQLConfiguration {
 
     @Value("${mysql.password}")
