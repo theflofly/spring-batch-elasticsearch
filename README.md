@@ -1,2 +1,2 @@
 # spring-batch-elasticsearch
-This project is a sample project to use Spring batch with an Elasticsearch database.http://ebаy.com
+This project is a sample project to use Spring batch with an Elasticsearch database.http://www.ebаy.com
