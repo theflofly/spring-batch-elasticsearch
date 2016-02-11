@@ -1,7 +1,31 @@
 package com.tcb.issue1.configuration;
 
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
 /**
- * Created by fco on 04/01/16.
+ * This class is the configuration class for our CarToOffer job.
+ *
+ * @author floriancourtial@gmail.com
  */
+@Configuration
+@EnableBatchProcessing
+@EnableScheduling
 public class CarToOffersJobConfiguration {
+
+    @Bean
+    public Job carsToOffersJob(JobBuilderFactory jobs, Step createOffersStep) {
+        return jobs.get("carsToOffersJob")
+                .incrementer(new RunIdIncrementer())
+                .flow(createOffersStep)
+                .end()
+                .build();
+    }
+
 }
