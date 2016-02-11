@@ -1,5 +1,6 @@
 package com.tcb.issue1.model;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -10,7 +11,8 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
  *
  * Created by Florian.Courtial on 11/01/16.
  */
-@Document(indexName="issue1", type="car")
+@Data
+@Document(indexName="db", type="car")
 public class Car {
 
     @Id
