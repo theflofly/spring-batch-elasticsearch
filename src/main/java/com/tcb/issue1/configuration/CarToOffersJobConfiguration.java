@@ -1,5 +1,6 @@
 package com.tcb.issue1.configuration;
 
+import com.tcb.issue1.job.CarToOfferJobListener;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -20,9 +21,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class CarToOffersJobConfiguration {
 
     @Bean
-    public Job carsToOffersJob(JobBuilderFactory jobs, Step createOffersStep) {
+    public Job carsToOffersJob(JobBuilderFactory jobs, Step createOffersStep, CarToOfferJobListener carToOfferJobListener) {
         return jobs.get("carsToOffersJob")
                 .incrementer(new RunIdIncrementer())
+                .listener(carToOfferJobListener)
                 .flow(createOffersStep)
                 .end()
                 .build();
