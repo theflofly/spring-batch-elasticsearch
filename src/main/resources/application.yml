@@ -2,6 +2,16 @@ spring:
   batch:
     job:
       enabled: false
+  data:
+      elasticsearch:
+        clusterName: adm-cluster
+        clusterNodes: localhost:9300
+        #local: true
+        properties:
+          http:
+            enabled: true
+        repositories:
+          enabled: true
 
 mysql:
   password: mypass
