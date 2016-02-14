@@ -27,4 +27,12 @@ public class Car {
     @Field(type = FieldType.Integer)
     private int age;
 
+    public Car(String id, String model, int milesNumber, int age) {
+        this.id = id;
+        this.model = model;
+        this.milesNumber = milesNumber;
+        this.age = age;
+    }
+
+    public Car() {}
 }
